@@ -1,0 +1,35 @@
+<?php $_cartQty = $this->getSummaryCount() ?>
+<div class="box header-cart" id="header-cart">
+    <div class="head" title="go to my basket" onclick="gotocheckout()">
+        <?php $_items = $this->getItems() ?>
+        <h6><?php echo $this->__('<a href="%s">My Basket</a>', $this->getUrl('checkout/cart')) ?></h6>
+        
+        <h4 id="header-cart-top" >
+	        <?php if ($_cartQty>0): ?>
+	            <?php if ($_cartQty==1): ?>
+	                <?php echo $this->__('<a href="%s"><span>1 item</span></a>', $this->getUrl('checkout/cart')) ?>
+	            <?php else: ?>
+	                <?php echo $this->__('<a href="'.$this->getUrl('checkout/cart').'"><span>%s items</span></a>', $_cartQty) ?>
+	            <?php endif ?>
+	        <?php else: ?>
+	            <?php echo $this->__('<a href="%s"><span>0 items</span></a>', $this->getUrl('checkout/cart')) ?>  
+	        <?php endif ?>
+	        -
+	        <?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
+        </h4>
+        <button type="submit" onclick="gotocart()" title="<?php echo $this->__('View Cart') ?>" class="button"><span><span><?php echo $this->__('View Cart') ?></span></span></button>
+        <button type="submit" onclick="gotocheckout()" title="<?php echo $this->__('Checkout') ?>" class="button"><span><span><?php echo $this->__('Checkout') ?></span></span></button>
+    </div>
+</div>
+
+<script type="text/javascript">
+	function gotocart() {
+		var url = '<?php echo $this->getUrl('checkout/cart'); ?>'
+		self.location= url;
+	}
+	function gotocheckout() {
+		var url = '<?php echo $this->getUrl('checkout/onepage'); ?>'
+		self.location= url;
+	}
+</script>
+

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+    <promindscatalog_specialoffers_index>
+		<label>Special Offers</label>
+		<reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <reference name="content">
+        	<block type="promindscatalog/product_specialoffers" name="all.product.offers" template="catalog/product/offers_all.phtml">
+                <action method="setProductsCount"><count>50</count></action>
+		    	<action method="addPriceBlockType">
+		      		<type>bundle</type>
+		      		<block>bundle/catalog_product_price</block>
+		      		<template>bundle/catalog/product/price.phtml</template>
+		    	</action>
+			</block>
+        </reference>
+	</promindscatalog_specialoffers_index>
+	
+	<promindscatalog_new_index>
+		<label>New Products</label>
+		<reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <reference name="content">
+        	<block type="catalog/product_new" name="all.product.new" template="catalog/product/new_all.phtml">
+                <action method="setProductsCount"><count>50</count></action>
+		    	<action method="addPriceBlockType">
+		      		<type>bundle</type>
+		      		<block>bundle/catalog_product_price</block>
+		      		<template>bundle/catalog/product/price.phtml</template>
+		    	</action>
+			</block>
+        </reference>
+	</promindscatalog_new_index>
+	
+</layout>

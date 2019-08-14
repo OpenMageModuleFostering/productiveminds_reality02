@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Productiveminds_Catalog>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>Mage_Catalog</depends>
+        </Productiveminds_Catalog>
+    </modules>
+</config>
