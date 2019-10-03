@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Productiveminds_Reality02",
+    "name": "OpenMageModuleFostering\/Productiveminds_Reality02",
     "type": "magento-module",
     "license": "OSL",
     "homepage": "",
     "description": "Reality theme is elegant, clean and attractive - boasting cool color scheme and design. It supports for all major browsers. Unique features: (i) Inherent homepage extension. (ii) Improved for SEO.",
     "authors": [
-    {
-        "name": "Productiveminds",
-        "email": "info@productiveminds.com"
-    }
-],
+        {
+            "name": "Productiveminds",
+            "email": "info@productiveminds.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
